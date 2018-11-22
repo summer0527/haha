@@ -1,23 +1,27 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+  	<div class="dell" @click="handleClick">{{message}}</div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  data () {
+  	return{
+  		message:'我是小仙女'
+  	}
+  },
+  methods:{
+  	handleClick () {
+  		this.message='才怪'
+  	}
+  }
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style scoped>
+	.dell{
+		color:red;
+	}
 </style>
